@@ -18,6 +18,13 @@ public class LoginPage extends BasePage {
 
 
     public void login(String userName, String password) {
+        driver.scrollDown();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        driver.scrollUp();
         inputLogin.clear();
         inputLogin.sendKeys(userName);
         inputPassword.clear();

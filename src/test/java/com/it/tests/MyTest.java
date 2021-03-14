@@ -23,6 +23,7 @@ public class MyTest extends BaseTest {
         app.login.login(validUser);
         Thread.sleep(2000);
         Assert.assertEquals(app.dashboard.getMailUser(), validUser.email);
+        app.common.takeScreenShot();
     }
 }
 
